@@ -1131,12 +1131,12 @@ $(document).ready(function () {
                 });
         };
 
-        self.loadRandomSystemSmall = function () {
+        self.loadRandomSystemPlanetSmall = function () {
             var generatorConfig = {
                 seed: Math.random(),
                 players: self.slots()
             };
-            return star_system_templates_small.generate(generatorConfig)
+            return star_system_templates_planet_small.generate(generatorConfig)
                 .then( function(system) {
                     self.unfixupPlanetConfig(system);
 
@@ -1165,7 +1165,79 @@ $(document).ready(function () {
                     self.updateSystem();
                     self.requestUpdateCheatConfig();
                 });
-        };        
+        };
+
+        self.loadRandomSystemPlanetMedium = function () {
+            var generatorConfig = {
+                seed: Math.random(),
+                players: self.slots()
+            };
+            return star_system_templates_planet_medium.generate(generatorConfig)
+                .then( function(system) {
+                    self.unfixupPlanetConfig(system);
+
+                    /*
+                    console.log("************* loadRandomSystem: Name: " + rSystem.name);
+                    _.forEach(rSystem.planets, function(bp) {
+                        console.log('Chosen System: Planet: name: ' + bp.planet.name);
+                        console.log('Chosen System: Planet: seed: ' + bp.planet.seed);
+                        console.log('Chosen System: Planet: radius: ' + bp.planet.radius);
+                        console.log('Chosen System: Planet: heightRange: ' + bp.planet.heightRange);
+                        console.log('Chosen System: Planet: temperature: ' + bp.planet.temperature);
+                        console.log('Chosen System: Planet: biome: ' + bp.planet.biome);
+                        console.log('Chosen System: Planet: biomeScale: ' + bp.planet.biomeScale);
+                        console.log('Chosen System: Planet: metal_density: ' + bp.planet.metal_density);
+                        console.log('Chosen System: Planet: metal_clusters: ' + bp.planet.metal_clusters);
+
+                        console.log('Chosen System: Planet: position_x: ' + bp.position_x);
+                        console.log('Chosen System: Planet: position_y: ' + bp.position_y);
+                        console.log('Chosen System: Planet: velocity_x: ' + bp.velocity_x);
+                        console.log('Chosen System: Planet: velocity_y: ' + bp.velocity_y);
+                        console.log('Chosen System: Planet: required_thrust_to_move: ' + bp.required_thrust_to_move);
+                    });
+                    */
+
+                    self.loadedSystem(system);
+                    self.updateSystem();
+                    self.requestUpdateCheatConfig();
+                });
+        };
+
+        self.loadRandomSystemPlanetLarge = function () {
+            var generatorConfig = {
+                seed: Math.random(),
+                players: self.slots()
+            };
+            return star_system_templates_planet_large.generate(generatorConfig)
+                .then( function(system) {
+                    self.unfixupPlanetConfig(system);
+
+                    /*
+                    console.log("************* loadRandomSystem: Name: " + rSystem.name);
+                    _.forEach(rSystem.planets, function(bp) {
+                        console.log('Chosen System: Planet: name: ' + bp.planet.name);
+                        console.log('Chosen System: Planet: seed: ' + bp.planet.seed);
+                        console.log('Chosen System: Planet: radius: ' + bp.planet.radius);
+                        console.log('Chosen System: Planet: heightRange: ' + bp.planet.heightRange);
+                        console.log('Chosen System: Planet: temperature: ' + bp.planet.temperature);
+                        console.log('Chosen System: Planet: biome: ' + bp.planet.biome);
+                        console.log('Chosen System: Planet: biomeScale: ' + bp.planet.biomeScale);
+                        console.log('Chosen System: Planet: metal_density: ' + bp.planet.metal_density);
+                        console.log('Chosen System: Planet: metal_clusters: ' + bp.planet.metal_clusters);
+
+                        console.log('Chosen System: Planet: position_x: ' + bp.position_x);
+                        console.log('Chosen System: Planet: position_y: ' + bp.position_y);
+                        console.log('Chosen System: Planet: velocity_x: ' + bp.velocity_x);
+                        console.log('Chosen System: Planet: velocity_y: ' + bp.velocity_y);
+                        console.log('Chosen System: Planet: required_thrust_to_move: ' + bp.required_thrust_to_move);
+                    });
+                    */
+
+                    self.loadedSystem(system);
+                    self.updateSystem();
+                    self.requestUpdateCheatConfig();
+                });
+        };
 
         self.setPrimaryPlanet = function (index) {
             var system = self.loadedSystem();

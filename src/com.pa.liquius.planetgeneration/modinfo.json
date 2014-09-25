@@ -3,11 +3,13 @@
   "context": "client",
   "identifier": "com.pa.liquius.planetgeneration",
   "display_name": "Better in-lobby planet generation",
-  "build": "71729",
-  "date": "2014/09/07",
+  "build": "72332",
+  "date": "2014/09/25",
   "description": "Adds more choice to in-lobby planet generation.",
   "category": [
-        "client-mod"
+        "UI",
+        "Lobby",
+        "Planet generation"
     ],
   "author": "Liquius",
   "version": "1",

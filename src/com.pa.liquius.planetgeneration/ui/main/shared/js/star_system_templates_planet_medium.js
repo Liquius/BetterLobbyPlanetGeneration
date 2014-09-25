@@ -1,5 +1,5 @@
 // !LOCNS:galactic_war
-var star_system_templates_small = function () {
+var star_system_templates_planet_medium = function () {
     var table = [
         {
             Players: [0, 10],
@@ -10,16 +10,16 @@ var star_system_templates_small = function () {
                             starting_planet: true,
                             mass: 50000,
                             Thrust: [0, 0],
-                            Radius: [375, 425],
+                            Radius: [575, 650],
                             Height: [20, 25],
                             Water: [30, 40],
                             Temp: [0, 100],
                             MetalDensity: [30, 40],
                             MetalClusters: [30, 40],
-                            BiomeScale: [100, 100],
-                            Position: [-15000, 0],
-                            Velocity: [0, 244],
-                            Biomes: [ 'earth', 'desert', 'tropical' ]
+                            BiomeScale: [0, 100],
+                            Position: [50000, 0],
+                            Velocity: [0, 100],
+                            Biomes: ['earth', 'desert', 'tropical', 'lava', 'moon', 'metal']
                         }
                     ]
                 }
