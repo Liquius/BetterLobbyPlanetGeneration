@@ -135,27 +135,12 @@
                                                 <div class="system-controls" data-bind="visible: isGameCreator">
                                                     <div class="btn_std_gray new_system" data-bind="click: loadRandomSystem">
                                                         <div class="btn_std_label">
-                                                            <loc data-i18n="new_game:uber_template.message" desc="">Uber's Template</loc>
+                                                            <loc data-i18n="new_game:new_system.message" desc="">New System</loc>
                                                         </div>
                                                     </div>
                                                     <div class="btn_std_gray load_system" data-bind="click: navToEditPlanet">
                                                         <div class="btn_std_label">
                                                             <loc data-i18n="new_game:browse.message" desc="">Browse...</loc>
-                                                        </div>
-                                                    </div>
-                                                    <div class="btn_std_gray new_system" data-bind="click: loadRandomSystemPlanetSmall">
-                                                        <div class="btn_std_label">
-                                                            <loc data-i18n="new_game:planet_small.message" desc=""> planet small</loc>
-                                                        </div>
-                                                    </div>
-                                                    <div class="btn_std_gray new_system" data-bind="click: loadRandomSystemPlanetMedium">
-                                                        <div class="btn_std_label">
-                                                            <loc data-i18n="new_game:planet_normal.message" desc="">planet normal</loc>
-                                                        </div>
-                                                    </div>
-                                                    <div class="btn_std_gray new_system" data-bind="click: loadRandomSystemPlanetLarge">
-                                                        <div class="btn_std_label">
-                                                            <loc data-i18n="new_game:planet_large.message" desc="">Planet Large</loc>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -164,6 +149,18 @@
                                                         <input type="checkbox" style="pointer-events: none !important;" data-bind="checked: landAnywhere" />
                                                         <loc data-i18n="new_game:player_chooses_spot_on_starting_planet.message" desc="">Player chooses spot on starting planet</loc>
                                                     </label>
+                                                </div>
+                                                <div class="section_header" data-bind="visible: isGameCreator">
+                                                    <loc>Better System Generation</loc>
+                                                </div>
+                                                <div class="">
+                                                    <select class="" data-bind="options: betterPlanetGenerationOptions, selectPicker: betterPlanetGeneration">
+                                                    </select>
+                                                </div>
+                                                <div class="btn_std_gray load_selected" data-bind="click: loadSelectedSystem">
+                                                    <div class="btn_std_label">
+                                                        <loc>Go</loc>
+                                                    </div>
                                                 </div>
                                                 <!-- /ko -->
                                                 <!-- ko ifnot: isGameCreator -->

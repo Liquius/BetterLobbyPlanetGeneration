@@ -1131,6 +1131,9 @@ $(document).ready(function () {
                 });
         };
 
+        self.betterPlanetGenerationOptions = ko.observableArray(['Planet Small', 'Planet Normal', 'Planet Large']);
+        self.betterPlanetGeneration = ko.observable(self.betterPlanetGenerationOptions()[0]);
+
         self.loadRandomSystemPlanetSmall = function () {
             var generatorConfig = {
                 seed: Math.random(),
