@@ -153,11 +153,15 @@
                                                 <div class="section_header" data-bind="visible: isGameCreator">
                                                     <loc>Better System Generation</loc>
                                                 </div>
-                                                <div class="">
-                                                    <select class="" data-bind="options: betterPlanetGenerationOptions, selectPicker: betterPlanetGeneration">
+                                                <div>
+                                                    <select id="betterSystemGenerationDropdown">
+                                                        <option value="0">Clicky Clicky</option>
+                                                        <option value="1">Planet Small</option>
+                                                        <option value="2">Planet Normal</option>
+                                                        <option value="3">Planet Large</option>
                                                     </select>
                                                 </div>
-                                                <div class="btn_std_gray load_selected" data-bind="click: loadSelectedSystem">
+                                                <div class="btn_std_gray load_selected" data-bind="click: loadBetterRandomSystem">
                                                     <div class="btn_std_label">
                                                         <loc>Go</loc>
                                                     </div>
